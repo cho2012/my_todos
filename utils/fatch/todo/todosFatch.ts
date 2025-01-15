@@ -1,6 +1,13 @@
-import { ITask } from "@/app/content/todos/page";
+import todoIcons from "@/components/todoIcons";
 import axios from "axios";
 import { Dispatch, SetStateAction } from "react";
+
+export interface ITask {
+  id: number;
+  title: string;
+  color: string;
+  icon: keyof typeof todoIcons | undefined;
+}
 
 export const todosFatch = async ({
   setTodos,
