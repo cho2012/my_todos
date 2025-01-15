@@ -68,7 +68,7 @@ const Todos = () => {
 
   return (
     <div>
-      <div className="w-full flex flex-col items-center ">
+      <div className="w-full flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 text-white ">
         {/* modal */}
         {showModal && (
           <AddTodoModal
