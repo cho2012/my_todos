@@ -95,7 +95,7 @@ const Todos = () => {
         <div className="w-full px-12">
           <Header />
           <div className="max-w-[56rem] flex flex-col items-center mx-auto">
-            {/* mobile */}
+            {/* a mobile */}
             <div className="w-full lg:hidden text-left m-8">
               <TodosLogo size={200} />
             </div>
