@@ -6,6 +6,7 @@ import TodosLogo from "@/components/svg/todosLogo";
 import TaskModal from "@/components/taskModal";
 import todoIcons from "@/components/todoIcons";
 import { todosFatch } from "@/utils/fatch/todo/todosFatch";
+
 import { AddButtonHandle } from "@/utils/handles/AddButtonHandle";
 import { DoneHandle } from "@/utils/handles/DoneHandle";
 import { useState, useEffect } from "react";
@@ -92,10 +93,10 @@ const Todos = () => {
           />
         )}
 
-        <div className="w-full px-12">
+        <div className="w-full px-12 ">
           <Header />
           <div className="max-w-[56rem] flex flex-col items-center mx-auto">
-            {/* a mobile */}
+            {/* mobile */}
             <div className="w-full lg:hidden text-left m-8">
               <TodosLogo size={200} />
             </div>
@@ -110,7 +111,7 @@ const Todos = () => {
               </div> */}
             </div>
 
-            <div className="grid grid-cols-4 w-full text-white gap-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-4 w-full text-white gap-4  mb-[100px]">
               {tasks.map((task) => (
                 <div
                   key={task.id}
@@ -120,9 +121,9 @@ const Todos = () => {
                 >
                   <div
                     style={{ backgroundColor: task.color }}
-                    className={`relative hover:ring-4 rounded-lg w-full pl-16 py-4 cursor-pointer text-white text-[1.1rem]`}
+                    className={`h-14 relative hover:ring-4 rounded-lg sm:w-full pl-16 py-4 cursor-pointer text-white text-[1.1rem]`}
                   >
-                    {task.title}
+                    <div className="sm:flex hidden">{task.title}</div>
                     <div className="absolute top-1/2 -translate-y-1/2 left-5">
                       <div className="text-3xl rounded-full flex justify-center items-center">
                         {task.icon && todoIcons[task.icon]}
